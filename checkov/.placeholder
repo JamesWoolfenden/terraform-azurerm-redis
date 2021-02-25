@@ -1,0 +1,7 @@
+
+ // ensure always false
+  enable_non_ssl_port = false
+  //check 1.2 or better
+  minimum_tls_version = var.minimum_tls_version
+
+public_network_access_enabled = false
