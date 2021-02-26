@@ -71,3 +71,8 @@ variable "redis_config" {
     rdb_backup_max_snapshot_count   = 0
   }
 }
+
+variable "nsg_name" {
+  type    = string
+  default = "examplea"
+}

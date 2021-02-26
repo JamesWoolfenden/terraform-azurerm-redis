@@ -52,12 +52,12 @@ No Modules.
 
 | Name |
 |------|
+| [azurerm_network_interface](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface) |
 | [azurerm_network_security_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_group) |
-| [azurerm_network_watcher](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_watcher) |
 | [azurerm_private_dns_zone](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_zone) |
 | [azurerm_private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) |
 | [azurerm_redis_cache](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/redis_cache) |
-| [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) |
+| [azurerm_subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/subnet) |
 
 ## Inputs
 
@@ -70,13 +70,13 @@ No Modules.
 | endpoint\_name | n/a | `string` | `"examplea-private"` | no |
 | family | n/a | `string` | `"C"` | no |
 | minimum\_tls\_version | n/a | `string` | `"1.2"` | no |
+| nsg\_name | n/a | `string` | `"examplea"` | no |
 | redis\_config | n/a | `map` | <pre>{<br>  "aof_backup_enabled": false,<br>  "maxfragmentationmemory_reserved": 50,<br>  "maxmemory_delta": 50,<br>  "maxmemory_policy": "volatile-lru",<br>  "maxmemory_reserved": 50,<br>  "rdb_backup_enabled": false,<br>  "rdb_backup_max_snapshot_count": 0<br>}</pre> | no |
 | redis\_name | n/a | `string` | `"examplea-cache"` | no |
 | resource\_group | n/a | `any` | n/a | yes |
 | sku\_name | n/a | `string` | `"Standard"` | no |
 | subnet | n/a | `any` | n/a | yes |
 | vnet | n/a | `any` | n/a | yes |
-| watcher\_location | n/a | `string` | `"westeurope"` | no |
 | zone\_name | The name of the private DNS zone | `string` | `"privatelink.redis.cache.windows.net"` | no |
 
 ## Outputs

@@ -20,6 +20,12 @@ init:
 plan:
 	terraform plan -refresh=true
 
+planned: init
+	terraform plan -out tf.plan
+	terraform show -json tf.plan  > tf.json
+	rm tf.plan
+	checkov -f tf.json
+
 p:
 	terraform plan -refresh=true
 
