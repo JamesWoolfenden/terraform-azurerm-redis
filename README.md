@@ -42,49 +42,49 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| azurerm | n/a |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
 
 ## Modules
 
-No Modules.
+No modules.
 
 ## Resources
 
-| Name |
-|------|
-| [azurerm_network_interface](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface) |
-| [azurerm_network_security_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_group) |
-| [azurerm_private_dns_zone](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_zone) |
-| [azurerm_private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) |
-| [azurerm_redis_cache](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/redis_cache) |
-| [azurerm_subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/subnet) |
+| Name | Type |
+|------|------|
+| [azurerm_network_interface.examplea](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface) | resource |
+| [azurerm_network_security_group.example](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_group) | resource |
+| [azurerm_private_dns_zone.examplea](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_zone) | resource |
+| [azurerm_private_endpoint.examplea](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) | resource |
+| [azurerm_redis_cache.examplea](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/redis_cache) | resource |
+| [azurerm_subnet.example](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/subnet) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| capacity | n/a | `number` | `1` | no |
-| common\_tags | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
-| connection\_name | n/a | `string` | `"examplea-private"` | no |
-| day\_of\_week | Monday Tuesday Wednesday Thursday Friday Saturday Sunday | `string` | `"Monday"` | no |
-| endpoint\_name | n/a | `string` | `"examplea-private"` | no |
-| family | n/a | `string` | `"C"` | no |
-| minimum\_tls\_version | n/a | `string` | `"1.2"` | no |
-| nsg\_name | n/a | `string` | `"examplea"` | no |
-| redis\_config | n/a | `map` | <pre>{<br>  "aof_backup_enabled": false,<br>  "maxfragmentationmemory_reserved": 50,<br>  "maxmemory_delta": 50,<br>  "maxmemory_policy": "volatile-lru",<br>  "maxmemory_reserved": 50,<br>  "rdb_backup_enabled": false,<br>  "rdb_backup_max_snapshot_count": 0<br>}</pre> | no |
-| redis\_name | n/a | `string` | `"examplea-cache"` | no |
-| resource\_group | n/a | `any` | n/a | yes |
-| sku\_name | n/a | `string` | `"Standard"` | no |
-| subnet | n/a | `any` | n/a | yes |
-| vnet | n/a | `any` | n/a | yes |
-| zone\_name | The name of the private DNS zone | `string` | `"privatelink.redis.cache.windows.net"` | no |
+| <a name="input_capacity"></a> [capacity](#input\_capacity) | n/a | `number` | `1` | no |
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
+| <a name="input_connection_name"></a> [connection\_name](#input\_connection\_name) | n/a | `string` | `"examplea-private"` | no |
+| <a name="input_day_of_week"></a> [day\_of\_week](#input\_day\_of\_week) | Monday Tuesday Wednesday Thursday Friday Saturday Sunday | `string` | `"Monday"` | no |
+| <a name="input_endpoint_name"></a> [endpoint\_name](#input\_endpoint\_name) | n/a | `string` | `"examplea-private"` | no |
+| <a name="input_family"></a> [family](#input\_family) | n/a | `string` | `"C"` | no |
+| <a name="input_minimum_tls_version"></a> [minimum\_tls\_version](#input\_minimum\_tls\_version) | n/a | `string` | `"1.2"` | no |
+| <a name="input_nsg_name"></a> [nsg\_name](#input\_nsg\_name) | n/a | `string` | `"examplea"` | no |
+| <a name="input_redis_config"></a> [redis\_config](#input\_redis\_config) | n/a | `map` | <pre>{<br>  "aof_backup_enabled": false,<br>  "maxfragmentationmemory_reserved": 50,<br>  "maxmemory_delta": 50,<br>  "maxmemory_policy": "volatile-lru",<br>  "maxmemory_reserved": 50,<br>  "rdb_backup_enabled": false,<br>  "rdb_backup_max_snapshot_count": 0<br>}</pre> | no |
+| <a name="input_redis_name"></a> [redis\_name](#input\_redis\_name) | n/a | `string` | `"examplea-cache"` | no |
+| <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | n/a | `any` | n/a | yes |
+| <a name="input_sku_name"></a> [sku\_name](#input\_sku\_name) | n/a | `string` | `"Standard"` | no |
+| <a name="input_subnet"></a> [subnet](#input\_subnet) | n/a | `any` | n/a | yes |
+| <a name="input_vnet"></a> [vnet](#input\_vnet) | n/a | `any` | n/a | yes |
+| <a name="input_zone_name"></a> [zone\_name](#input\_zone\_name) | The name of the private DNS zone | `string` | `"privatelink.redis.cache.windows.net"` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| cache | n/a |
-| endpoint | n/a |
+| <a name="output_cache"></a> [cache](#output\_cache) | n/a |
+| <a name="output_endpoint"></a> [endpoint](#output\_endpoint) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
