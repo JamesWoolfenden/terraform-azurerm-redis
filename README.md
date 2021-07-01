@@ -75,7 +75,7 @@ No modules.
 | <a name="input_redis_name"></a> [redis\_name](#input\_redis\_name) | n/a | `string` | `"examplea-cache"` | no |
 | <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | n/a | `any` | n/a | yes |
 | <a name="input_sku_name"></a> [sku\_name](#input\_sku\_name) | n/a | `string` | `"Standard"` | no |
-| <a name="input_subnet"></a> [subnet](#input\_subnet) | n/a | `any` | n/a | yes |
+| <a name="input_subnet_id"></a> [subnet\_id](#input\_subnet\_id) | n/a | `any` | n/a | yes |
 | <a name="input_vnet"></a> [vnet](#input\_vnet) | n/a | `any` | n/a | yes |
 | <a name="input_zone_name"></a> [zone\_name](#input\_zone\_name) | The name of the private DNS zone | `string` | `"privatelink.redis.cache.windows.net"` | no |
 

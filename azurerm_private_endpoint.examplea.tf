@@ -1,7 +1,7 @@
 resource "azurerm_private_endpoint" "examplea" {
   resource_group_name = var.resource_group.name
   location            = var.resource_group.location
-  subnet_id           = var.subnet.id
+  subnet_id           = var.subnet_id
   name                = var.endpoint_name
   private_service_connection {
     private_connection_resource_id = azurerm_redis_cache.examplea.id
