@@ -45,7 +45,7 @@ variable "minimum_tls_version" {
   default = "1.2"
 }
 
-variable "subnet" {
+variable "subnet_id" {
 
 }
 

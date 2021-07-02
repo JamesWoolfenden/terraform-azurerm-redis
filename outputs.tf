@@ -1,5 +1,6 @@
 output "cache" {
-  value = azurerm_redis_cache.examplea
+  value     = azurerm_redis_cache.examplea
+  sensitive = true
 }
 
 output "endpoint" {

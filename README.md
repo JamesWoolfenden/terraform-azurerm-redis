@@ -27,6 +27,28 @@ module "redis" {
 
 ```
 
+## Costs
+
+```text
+Monthly cost estimate
+
+Project: JamesWoolfenden/terraform-azurerm-redis/example/examplea
+
+ Name                                            Monthly Qty  Unit    Monthly Cost
+
+ module.redis.azurerm_private_dns_zone.examplea
+ └─ Hosted zone                                            1  months         $0.50
+
+ module.redis.azurerm_redis_cache.examplea
+ └─ Cache usage (Standard_C1)                          1,460  hours        $201.48
+
+ OVERALL TOTAL                                                             $201.98
+----------------------------------
+2 resource types weren't estimated as they're not supported yet.
+1 x azurerm_network_watcher
+1 x azurerm_private_endpoint
+```
+
 Supply values for your resource and database name, other values have defaults which can be over ridden.
 
 ---
@@ -57,7 +79,6 @@ No modules.
 | [azurerm_private_dns_zone.examplea](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_zone) | resource |
 | [azurerm_private_endpoint.examplea](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) | resource |
 | [azurerm_redis_cache.examplea](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/redis_cache) | resource |
-| [azurerm_subnet.example](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/subnet) | data source |
 
 ## Inputs
 
@@ -75,7 +96,7 @@ No modules.
 | <a name="input_redis_name"></a> [redis\_name](#input\_redis\_name) | n/a | `string` | `"examplea-cache"` | no |
 | <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | n/a | `any` | n/a | yes |
 | <a name="input_sku_name"></a> [sku\_name](#input\_sku\_name) | n/a | `string` | `"Standard"` | no |
-| <a name="input_subnet"></a> [subnet](#input\_subnet) | n/a | `any` | n/a | yes |
+| <a name="input_subnet_id"></a> [subnet\_id](#input\_subnet\_id) | n/a | `any` | n/a | yes |
 | <a name="input_vnet"></a> [vnet](#input\_vnet) | n/a | `any` | n/a | yes |
 | <a name="input_zone_name"></a> [zone\_name](#input\_zone\_name) | The name of the private DNS zone | `string` | `"privatelink.redis.cache.windows.net"` | no |
 
