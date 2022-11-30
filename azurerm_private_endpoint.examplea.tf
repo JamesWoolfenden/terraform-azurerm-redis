@@ -17,24 +17,22 @@ resource "azurerm_private_endpoint" "examplea" {
     private_dns_zone_ids = [azurerm_private_dns_zone.examplea.id]
   }
 
-
-
   timeouts {
 
   }
   tags = var.common_tags
 }
 
-resource "azurerm_network_interface" "examplea" {
-  name                = "example-nic"
-  location            = var.resource_group.location
-  resource_group_name = var.resource_group.name
+# resource "azurerm_network_interface" "examplea" {
+#   name                = "example-nic"
+#   location            = var.resource_group.location
+#   resource_group_name = var.resource_group.name
 
-  ip_configuration {
-    name                          = "internal"
-    subnet_id                     = var.subnet_id
-    private_ip_address_allocation = "Dynamic"
-  }
+#   ip_configuration {
+#     name                          = "internal"
+#     subnet_id                     = var.subnet_id
+#     private_ip_address_allocation = "Dynamic"
+#   }
 
-  tags = var.common_tags
-}
+#   tags = var.common_tags
+# }
