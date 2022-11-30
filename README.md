@@ -74,7 +74,6 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [azurerm_network_interface.examplea](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface) | resource |
 | [azurerm_network_security_group.example](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_group) | resource |
 | [azurerm_private_dns_zone.examplea](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_zone) | resource |
 | [azurerm_private_endpoint.examplea](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) | resource |
@@ -120,15 +119,25 @@ resource "azurerm_role_definition" "terraform_pike" {
 
   permissions {
     actions = [
-    "Microsoft.Network/networkInterfaces/delete",
-    "Microsoft.Network/networkInterfaces/read",
-    "Microsoft.Network/networkInterfaces/write",
+    "Microsoft.Cache/redis/PrivateEndpointConnectionsApproval/action",
+    "Microsoft.Cache/redis/delete",
+    "Microsoft.Cache/redis/listKeys/action",
+    "Microsoft.Cache/redis/patchSchedules/delete",
+    "Microsoft.Cache/redis/read",
+    "Microsoft.Cache/redis/write",
     "Microsoft.Network/networkSecurityGroups/delete",
     "Microsoft.Network/networkSecurityGroups/read",
     "Microsoft.Network/networkSecurityGroups/write",
-    "Microsoft.Network/virtualNetworks/subnets/join/action",
-    "Microsoft.Network/virtualNetworks/subnets/read",
-    "Microsoft.Resources/subscriptions/resourcegroups/read"]
+    "Microsoft.Network/privateDnsZones/SOA/read",
+    "Microsoft.Network/privateDnsZones/delete",
+    "Microsoft.Network/privateDnsZones/join/action",
+    "Microsoft.Network/privateDnsZones/read",
+    "Microsoft.Network/privateDnsZones/write",
+    "Microsoft.Network/privateEndpoints/delete",
+    "Microsoft.Network/privateEndpoints/privateDnsZoneGroups/write",
+    "Microsoft.Network/privateEndpoints/read",
+    "Microsoft.Network/privateEndpoints/write",
+    "Microsoft.Network/virtualNetworks/subnets/join/action"]
     not_actions = []
   }
 
